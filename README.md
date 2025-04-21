@@ -76,3 +76,41 @@ For example, when doing 'df[col].method(value, inplace=True)', try using 'df.met
   df_cleaned['POSTALCODE'].fillna("00000", inplace=True)
 
 [cleaned_sales_data.csv](https://github.com/user-attachments/files/19835935/cleaned_sales_data.csv)
+
+Data Cleaning Report: Sales Dataset
+
+For this task, I used a sales dataset containing information on product orders, customer details, sales values, and order status. The dataset had 24 columns and included fields such as ORDERDATE, QUANTITYORDERED, PRICEEACH, CUSTOMERNAME, and STATUS.
+
+During cleaning:
+I checked for missing values and removed rows missing key data like quantity, price, or order date.Columns such as STATE and POSTALCODE with minor missing values were filled with default values like 'Unknown' and '00000'.
+Duplicate rows were identified and removed.
+The ORDERDATE column was converted to a proper datetime format for easy analysis.Column names were simplified for readability, such as renaming QUANTITYORDERED to Quantity.
+After cleaning, the dataset was saved as cleaned_sales_data.csv. It is now ready for further analysis or visualization.
+
+
+In the preprocessing stage
+ I extracted new features from the OrderDate such as year, month, and day. I also created a TotalSale column by multiplying quantity and unit price to help with future revenue analysis. Text data in columns like CustomerName and ProductLine were standardized to lowercase and stripped of whitespace. Lastly, the Status column was encoded into numerical values using label encoding, making the dataset more suitable for further analysis or modeling.
+
+
+
+
+Sales Data Cleaning & Preprocessing
+
+Overview
+This project involves cleaning and preprocessing a sales dataset that includes customer orders, order dates, product details, and sales values.
+
+Tasks Completed
+- Removed missing and duplicate records
+- Converted `OrderDate` to datetime format
+- Renamed and standardized column names
+- Extracted new features: `Year`, `Month`, `Day`, `TotalSale`
+- Encoded the `Status` column using label encoding
+
+Output
+- Final cleaned file: `cleaned_sales_data.csv`
+
+Tools Used
+- Python (Pandas)
+- Google Colab
+
+
